@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/brick">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="19dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/fourth_question"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean"
+            tools:text="IV. How many people do you think that succeeded enhancing to +16?" />
+
+        <RadioGroup
+            android:id="@+id/RGroup3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+
+            <RadioButton
+                android:id="@+id/oneOrTwo"
+                android:layout_width="219dp"
+                android:layout_height="30dp"
+                android:text="@string/oneortwo_people"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="One or two people." />
+
+            <RadioButton
+                android:id="@+id/twoOrThree"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/twoorthree_people"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="Two or three people." />
+
+
+            <RadioButton
+                android:id="@+id/threeOrFour"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/threeorfour_people"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="Three or four people.." />
+
+            <RadioButton
+                android:id="@+id/fourOrFive"
+                android:layout_width="220dp"
+                android:layout_height="30dp"
+                android:text="@string/fourorfive_people"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="Four or five people." />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/plussixteen_image"
+            app:srcCompat="@mipmap/ferghus" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/previousPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#000000"
+                android:text="@string/previous_page"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/nextPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="@string/next_page"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

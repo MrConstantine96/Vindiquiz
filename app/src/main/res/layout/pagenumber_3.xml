@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/brick">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="238dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="19dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/second_quesiton"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean"
+            tools:text="II. Which of the following rates of success at enhancing do you think they have implemented after the Rise update? (Before Rise, you could have not enhance your weapon over +15. After Rise, you could enhance them until +20 and we reffer about enhancing your weapon from +15 to +16)" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="242dp"
+            android:contentDescription="@string/plussixteen_image"
+            app:srcCompat="@mipmap/plussixteen" />
+
+        <RadioGroup
+            android:id="@+id/RGroup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:orientation="vertical">
+
+
+            <RadioButton
+                android:id="@+id/forty"
+                android:layout_width="180dp"
+                android:layout_height="30dp"
+                android:text="@string/forty_radiobutton"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="40%" />
+
+            <RadioButton
+                android:id="@+id/thirtyfour"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="@string/thirtyfour_radiobutton"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="34%" />
+
+
+            <RadioButton
+                android:id="@+id/nineteen"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="@string/nineteen_radiobutton"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="19%" />
+
+            <RadioButton
+                android:id="@+id/fourteen"
+                android:layout_width="110dp"
+                android:layout_height="30dp"
+                android:text="@string/fourteen_radiobutton"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                tools:text="14%" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/previousPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#000000"
+                android:text="@string/previous_page"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/nextPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="@string/next_page"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/brick">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/sixth_question"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean"
+            tools:text="VI. Will you try out Vindictus?" />
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="#FFFFFF"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text" />
+
+
+        <Button
+            android:id="@+id/submit_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#000000"
+            android:text="@string/submitAnswer"
+            android:textColor="#FFFFFF"
+            tools:text="Submit" />
+
+
+        <Button
+            android:id="@+id/quiz_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#000000"
+            android:onClick="showResult"
+            android:text="@string/summary_result"
+            android:textColor="#FFFFFF"
+            tools:text="Quiz result" />
+
+        <TextView
+            android:id="@+id/summary_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:fontFamily="sans-serif"
+            android:text="@string/score_summary"
+            android:textColor="#FFFFFF"
+            android:textSize="27sp" />
+
+
+        <Button
+            android:id="@+id/reset_score"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/reset_score"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/previousPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="#000000"
+            android:text="@string/previous_page"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

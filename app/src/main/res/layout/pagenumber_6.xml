@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/brick">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="149dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="19dp"
+            android:layout_marginTop="19dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/fifth_question"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean"
+            tools:text="V. Which one of the following do you think is the name of the following character in EU and on KR servers? (newest INT based character implemented in Vindictus)" />
+
+        <ImageView
+            android:id="@+id/sylas_gif"
+            android:layout_width="match_parent"
+            android:layout_height="239dp"
+            android:layout_marginTop="60dp"
+            android:contentDescription="@string/hagie_gif"
+            app:srcCompat="@drawable/sylas_gif" />
+
+        <CheckBox
+            android:id="@+id/sylas"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:text="@string/sylas_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
+
+        <CheckBox
+            android:id="@+id/hagie"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:text="@string/hagie_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
+
+        <CheckBox
+            android:id="@+id/evie"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:text="@string/evie_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
+
+        <CheckBox
+            android:id="@+id/hurk"
+            android:layout_width="84dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:text="@string/hurk_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/previousPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#000000"
+                android:text="@string/previous_page"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/nextPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="@string/next_page"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

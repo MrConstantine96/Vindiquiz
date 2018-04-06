@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/brick">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="19dp"
+            android:layout_marginTop="25dp"
+            android:fontFamily="sans-serif"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/first_question"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            tools:targetApi="jelly_bean"
+            tools:text="I. Which map of the following is the map that has The Forge in it?" />
+
+        <ImageView
+            android:id="@+id/rocheste_imageView"
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:contentDescription="@string/rocheste_image"
+            android:src="@drawable/rocheste" />
+
+        <CheckBox
+            android:id="@+id/rocheste"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/rocheste_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:text="Rocheste (Season I map)" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="241dp"
+            android:contentDescription="@string/colheln_image"
+            android:src="@mipmap/colheln" />
+
+        <CheckBox
+            android:id="@+id/colheln"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/colheln_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:text="Colheln (Season I map)" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="284dp"
+            android:contentDescription="@string/malina_image"
+            app:srcCompat="@mipmap/malina" />
+
+        <CheckBox
+            android:id="@+id/malina"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/malina_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:text="Malina (Season II map)" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="255dp"
+            android:contentDescription="@string/berbhe_image"
+            app:srcCompat="@mipmap/berbhe" />
+
+        <CheckBox
+            android:id="@+id/berbhe"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="500dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/berbhe_checkbox"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            tools:text="Berbhe (Season III map)" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/previousPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#000000"
+                android:text="@string/previous_page"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/nextPage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:text="@string/next_page"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

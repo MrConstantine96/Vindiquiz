@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/brick">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="28dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_one"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_two"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:targetApi="jelly_bean" />
+
+        <ImageView
+            android:id="@+id/vindiImage"
+            android:layout_width="match_parent"
+            android:layout_height="351dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/header_image"
+            android:src="@mipmap/vindi" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/text_three"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            android:textStyle="italic"
+            tools:targetApi="jelly_bean" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Name:"
+                        android:textStyle="bold"
+                        android:textSize="25dp"
+
+                        android:textColor="#FFFFFF" />
+
+                    <EditText
+                        android:id="@+id/nameInput"
+                        android:layout_width="300dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:textStyle="bold"
+                        android:textColor="#FFFFFF"
+                        android:inputType="text"/>
+
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/nextPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="#000000"
+            android:text="@string/next_page"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+</ScrollView>
