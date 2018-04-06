@@ -71,7 +71,7 @@ public class Page5 extends AppCompatActivity {
         editor.putBoolean("ONEORTWO", isOneOrTwo);
         editor.putBoolean("TWOORTHREE", isTwoOrThree);
         editor.putBoolean("THREEORFOUR", isThreeOrFour);
-        editor.putBoolean("FOURORFVE", isFourOrFive);
+        editor.putBoolean("FOURORFIVE", isFourOrFive);
         editor.apply();
     }
 }

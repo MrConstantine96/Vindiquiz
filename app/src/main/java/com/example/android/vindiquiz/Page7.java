@@ -1,4 +1,5 @@
 package com.example.android.vindiquiz;
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -9,12 +10,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
 public class Page7 extends AppCompatActivity {
     int score = 0;
     int resetScore = 0;
     String name, answer;
     private EditText editText;
     private SharedPreferences prefs;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,11 +30,10 @@ public class Page7 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Get the answer the user entered
-                answer =  editText.getText().toString();
-                if (answer.trim().equalsIgnoreCase("YES")) {
+                answer = editText.getText().toString();
+                if (answer.trim().equalsIgnoreCase("yes")) {
                     Toast.makeText(Page7.this, "Good choice!", Toast.LENGTH_LONG).show();
-                }
-                else Toast.makeText(Page7.this, "Wrong answer", Toast.LENGTH_LONG).show();
+                } else Toast.makeText(Page7.this, "Wrong answer", Toast.LENGTH_LONG).show();
             }
         });
         Button button = findViewById(R.id.previousPage);
@@ -49,15 +51,18 @@ public class Page7 extends AppCompatActivity {
             }
         });
     }
+
     public void openActivityPage6() {
         Intent intent = new Intent(this, Page6.class);
         startActivity(intent);
     }
+
     public void openActivityPage1() {
         resetScore();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
+
     /**
      * This method is called when the button result is clicked.
      */
@@ -68,11 +73,12 @@ public class Page7 extends AppCompatActivity {
         boolean malina = prefs.getBoolean("MALINA", false);
         boolean berbhe = prefs.getBoolean("BERBHE", false);
         if (malina && colheln && !rocheste && !berbhe) {
-            score += 2;}
-        else if (malina && !colheln && !rocheste && !berbhe) {
-            score ++;}
-        else if (!malina && colheln && !rocheste && !berbhe) {
-            score ++;}
+            score += 2;
+        } else if (malina && !colheln && !rocheste && !berbhe) {
+            score++;
+        } else if (!malina && colheln && !rocheste && !berbhe) {
+            score++;
+        }
         boolean fourteen = prefs.getBoolean("FOURTEEN", false);
         if (fourteen) score += 1;
         boolean fivty = prefs.getBoolean("FIVTY", false);
@@ -83,14 +89,21 @@ public class Page7 extends AppCompatActivity {
         boolean hagie = prefs.getBoolean("HAGIE", false);
         boolean evie = prefs.getBoolean("EVIE", false);
         boolean hurk = prefs.getBoolean("HURK", false);
-        if (sylas&&hagie&&!evie&&!hurk) {score += 2;}
-        else if (!sylas&&hagie&&!evie&&!hurk) {score ++;}
-        else if (sylas&&!hagie&&!evie&&!hurk) {score ++;}
-        if (answer.trim().equalsIgnoreCase("YES")) {
-            score ++;
+        if (sylas && hagie && !evie && !hurk) {
+            score += 2;
+        } else if (!sylas && hagie && !evie && !hurk) {
+            score++;
+        } else if (sylas && !hagie && !evie && !hurk) {
+            score++;
+        }
+        if (answer != null && !answer.isEmpty()) {
+            if (answer.trim().equalsIgnoreCase("yes")) {
+                score++;
+            }
         }
         return score;
     }
+
     /**
      * This method calculates the score of the quiz.
      */
@@ -98,6 +111,7 @@ public class Page7 extends AppCompatActivity {
         score = calculateScore();
         display(score);
     }
+
     /**
      * This method displays the score on the screen.
      */
@@ -107,17 +121,16 @@ public class Page7 extends AppCompatActivity {
         editor.apply();
         if (score >= 8) {
             TextView scoreTextView = (TextView) findViewById(R.id.summary_score);
-            scoreTextView.setText("Congratulations " + name + "!" + "\nYou did great! " + "\nScore: " + score + "/8");
-        }
-        if (score <= 5) {
+            scoreTextView.setText("Congratulations " + name + "!" + "\nYou are the Vindictus Quiz Master! " + "\nScore: " + score + "/8");
+        } else if (score >= 5) {
             TextView scoreTextView2 = (TextView) findViewById(R.id.summary_score);
             scoreTextView2.setText("You can do better " + name + "!" + "\nTry again! " + "\nScore: " + score + "/8");
-        }
-        if (score <= 2) {
+        } else if (score >= 0) {
             TextView scoreTextView = (TextView) findViewById(R.id.summary_score);
             scoreTextView.setText("Hmm... " + name + "!" + "\nBetter luck next time! " + "\nScore: " + score + "/8");
         }
     }
+
     /**
      * Resets the score of the quiz to 0.
      * Clears all RadioGroups and CheckBoxes.
