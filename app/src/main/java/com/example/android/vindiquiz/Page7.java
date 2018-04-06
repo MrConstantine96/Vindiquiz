@@ -3,6 +3,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,11 +21,19 @@ public class Page7 extends AppCompatActivity {
         setContentView(R.layout.pagenumber_7);
         prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
         name = prefs.getString("MY_NAME", "");
-
         editText = (EditText) findViewById(R.id.editText);
-        //Get the answer the user entered
-        answer =  editText.getText().toString();
-
+        Button submitAnswer = findViewById(R.id.submit_answer);
+        submitAnswer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //Get the answer the user entered
+                answer =  editText.getText().toString();
+                if (answer.trim().equalsIgnoreCase("YES")) {
+                    Toast.makeText(Page7.this, "Good choice!", Toast.LENGTH_LONG).show();
+                }
+                else Toast.makeText(Page7.this, "Wrong answer", Toast.LENGTH_LONG).show();
+            }
+        });
         Button button = findViewById(R.id.previousPage);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,9 +63,9 @@ public class Page7 extends AppCompatActivity {
      */
     private int calculateScore() {
         score = 0;
-        boolean malina = prefs.getBoolean("MALINA", false);
-        boolean colheln = prefs.getBoolean("COLHELN", false);
         boolean rocheste = prefs.getBoolean("ROCHESTE", false);
+        boolean colheln = prefs.getBoolean("COLHELN", false);
+        boolean malina = prefs.getBoolean("MALINA", false);
         boolean berbhe = prefs.getBoolean("BERBHE", false);
         if (malina && colheln && !rocheste && !berbhe) {
             score += 2;}
@@ -74,15 +83,11 @@ public class Page7 extends AppCompatActivity {
         boolean hagie = prefs.getBoolean("HAGIE", false);
         boolean evie = prefs.getBoolean("EVIE", false);
         boolean hurk = prefs.getBoolean("HURK", false);
-        if (sylas && hagie && !evie && !hurk) {
-            score += 2;}
-        else if (sylas && !hagie && !evie && !hurk) {
-            score ++;}
-        else if (!sylas && hagie && !evie && !hurk) {
-            score ++;}
+        if (sylas&&hagie&&!evie&&!hurk) {score += 2;}
+        else if (!sylas&&hagie&&!evie&&!hurk) {score ++;}
+        else if (sylas&&!hagie&&!evie&&!hurk) {score ++;}
         if (answer.trim().equalsIgnoreCase("YES")) {
             score ++;
-            Toast.makeText(this, "Good choice!", Toast.LENGTH_LONG).show();
         }
         return score;
     }
