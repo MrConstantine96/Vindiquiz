@@ -30,7 +30,7 @@
             android:textStyle="bold"
             android:gravity="center"
             tools:targetApi="jelly_bean"
-            tools:text="I. Which map of the following is the map that has The Forge in it?" />
+            tools:text="I. In which of the following maps can you enhance your gear?" />
 
         <ImageView
             android:id="@+id/rocheste_imageView"

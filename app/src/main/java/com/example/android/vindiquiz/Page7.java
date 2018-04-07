@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,18 +21,23 @@ public class Page7 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pagenumber_7);
+
         prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
         name = prefs.getString("MY_NAME", "");
         editText = (EditText) findViewById(R.id.editText);
+
         Button submitAnswer = findViewById(R.id.submit_answer);
         submitAnswer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Get the answer the user entered
+
                 answer = editText.getText().toString();
-                if (answer.trim().equalsIgnoreCase("yes")) {
-                    Toast.makeText(Page7.this, "Good choice!", Toast.LENGTH_LONG).show();
-                } else Toast.makeText(Page7.this, "Wrong answer", Toast.LENGTH_LONG).show();
+
+
+                if (answer.trim().equalsIgnoreCase("2011")) {
+                    Toast.makeText(Page7.this, "Correct! Vindictus was released in Europe in 2011!", Toast.LENGTH_LONG).show();
+                } else
+                    Toast.makeText(Page7.this, "Better luck next time!", Toast.LENGTH_LONG).show();
             }
         });
         Button button = findViewById(R.id.previousPage);
@@ -72,35 +76,31 @@ public class Page7 extends AppCompatActivity {
         boolean colheln = prefs.getBoolean("COLHELN", false);
         boolean malina = prefs.getBoolean("MALINA", false);
         boolean berbhe = prefs.getBoolean("BERBHE", false);
-        if (malina && colheln && !rocheste && !berbhe) {
-            score += 2;
-        } else if (malina && !colheln && !rocheste && !berbhe) {
-            score++;
-        } else if (!malina && colheln && !rocheste && !berbhe) {
+        if (!malina && colheln && !rocheste && !berbhe) {
             score++;
         }
         boolean fourteen = prefs.getBoolean("FOURTEEN", false);
-        if (fourteen) score += 1;
+        if (fourteen) score++;
         boolean fivty = prefs.getBoolean("FIVTY", false);
-        if (fivty) score += 1;
+        if (fivty) score++;
         boolean fourOrFive = prefs.getBoolean("FOURORFIVE", false);
-        if (fourOrFive) score += 1;
+        if (fourOrFive) score++;
         boolean sylas = prefs.getBoolean("SYLAS", false);
         boolean hagie = prefs.getBoolean("HAGIE", false);
         boolean evie = prefs.getBoolean("EVIE", false);
         boolean hurk = prefs.getBoolean("HURK", false);
-        if (sylas && hagie && !evie && !hurk) {
-            score += 2;
-        } else if (!sylas && hagie && !evie && !hurk) {
-            score++;
-        } else if (sylas && !hagie && !evie && !hurk) {
+        if (sylas && !hagie && !evie && !hurk) {
             score++;
         }
-        if (answer != null && !answer.isEmpty()) {
-            if (answer.trim().equalsIgnoreCase("yes")) {
-                score++;
-            }
+
+        //Get the answer the user entered
+        answer = editText.getText().toString();
+
+        if (answer.trim().equalsIgnoreCase("2011")) {
+
+            score++;
         }
+
         return score;
     }
 
@@ -119,15 +119,15 @@ public class Page7 extends AppCompatActivity {
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString("", "");
         editor.apply();
-        if (score >= 8) {
+        if (score >= 6) {
             TextView scoreTextView = (TextView) findViewById(R.id.summary_score);
-            scoreTextView.setText("Congratulations " + name + "!" + "\nYou are the Vindictus Quiz Master! " + "\nScore: " + score + "/8");
-        } else if (score >= 5) {
+            scoreTextView.setText("Congratulations " + name + "!" + "\nYou are the Vindictus Quiz Master! " + "\nScore: " + score + "/6");
+        } else if (score >= 3) {
             TextView scoreTextView2 = (TextView) findViewById(R.id.summary_score);
-            scoreTextView2.setText("You can do better " + name + "!" + "\nTry again! " + "\nScore: " + score + "/8");
+            scoreTextView2.setText("You can do better " + name + "!" + "\nTry again! " + "\nScore: " + score + "/6");
         } else if (score >= 0) {
             TextView scoreTextView = (TextView) findViewById(R.id.summary_score);
-            scoreTextView.setText("Hmm... " + name + "!" + "\nBetter luck next time! " + "\nScore: " + score + "/8");
+            scoreTextView.setText("Hmm... " + name + "!" + "\nBetter luck next time! " + "\nScore: " + score + "/6");
         }
     }
 

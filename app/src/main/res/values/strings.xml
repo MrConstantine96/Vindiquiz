@@ -3,7 +3,7 @@
     <string name="text_one">How much do you know</string>
     <string name="text_two">about:</string>
     <string name="header_image">Header image</string>
-    <string name="first_question">I. Which map of the following is the map that has The Forge in it?</string>
+    <string name="first_question">I. In which of the following maps can you enhance your gear?</string>
     <string name="text_three">Find out in the Quiz below!</string>
     <string name="edit_text">Enter Your Name Here</string>
     <string name="rocheste_image">Rocheste image</string>
@@ -31,7 +31,7 @@
     <string name="twoorthree_people">Two or three people.</string>
     <string name="threeorfour_people">Three or four people..</string>
     <string name="fourorfive_people">Four or five people.</string>
-    <string name="fifth_question">V. Which one of the following do you think is the name of the following character in EU and on KR servers? (newest INT based character implemented in Vindictus)</string>
+    <string name="fifth_question">V. Which one of the following do you think is the name of the following character in EU? (newest INT based character implemented in Vindictus)</string>
     <string name="hagie_gif">Hagie gif</string>
     <string name="sylas_checkbox">Sylas</string>
     <string name="hagie_checkbox">Hagie</string>
@@ -42,6 +42,6 @@
     <string name="summary_result">Quiz result</string>
     <string name="score_summary">Score</string>
     <string name="reset_score">Take quiz again</string>
-    <string name="sixth_question">VI. Will you try out Vindictus?</string>
+    <string name="sixth_question">VI. In which year do you think Vindictus was released in Europe?</string>
     <string name="submitAnswer">Submit</string>
 </resources>

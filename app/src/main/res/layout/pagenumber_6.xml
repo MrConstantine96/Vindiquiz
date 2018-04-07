@@ -27,7 +27,7 @@
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean"
-            tools:text="V. Which one of the following do you think is the name of the following character in EU and on KR servers? (newest INT based character implemented in Vindictus)" />
+            tools:text="V. Which one of the following do you think is the name of the following character in EU? (newest INT based character implemented in Vindictus)" />
 
         <ImageView
             android:id="@+id/sylas_gif"
