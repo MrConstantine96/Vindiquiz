@@ -11,7 +11,10 @@ import android.widget.RadioButton;
 
 public class Page3 extends AppCompatActivity {
 
-    private RadioButton forty, thirtyfour, nineteen, fourteen;
+    private RadioButton q2_forty_rb;
+    private RadioButton q2_thirtyfour_rb;
+    private RadioButton q2_nineteen_rb;
+    private RadioButton q2_fourteen_rb;
     private SharedPreferences prefs;
 
     @Override
@@ -20,17 +23,16 @@ public class Page3 extends AppCompatActivity {
         setContentView(R.layout.pagenumber_3);
 
         prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
-        String name = prefs.getString("MY_NAME", "");
 
-        forty = (RadioButton) findViewById(R.id.forty);
-        thirtyfour = (RadioButton) findViewById(R.id.thirtyfour);
-        nineteen = (RadioButton) findViewById(R.id.nineteen);
-        fourteen = (RadioButton) findViewById(R.id.fourteen);
+        q2_forty_rb = (RadioButton) findViewById(R.id.q2_forty_rb);
+        q2_thirtyfour_rb = (RadioButton) findViewById(R.id.q2_thirtyfour_rb);
+        q2_nineteen_rb = (RadioButton) findViewById(R.id.q2_nineteen_rb);
+        q2_fourteen_rb = (RadioButton) findViewById(R.id.q2_fourteen_rb);
 
-        forty.setChecked(prefs.getBoolean("FORTY", false));
-        thirtyfour.setChecked(prefs.getBoolean("THIRTYFOUR", false));
-        nineteen.setChecked(prefs.getBoolean("NINETEEN", false));
-        fourteen.setChecked(prefs.getBoolean("FOURTEEN", false));
+        q2_forty_rb.setChecked(prefs.getBoolean("FORTY", false));
+        q2_thirtyfour_rb.setChecked(prefs.getBoolean("THIRTYFOUR", false));
+        q2_nineteen_rb.setChecked(prefs.getBoolean("NINETEEN", false));
+        q2_fourteen_rb.setChecked(prefs.getBoolean("FOURTEEN", false));
 
         Button button = findViewById(R.id.nextPage);
         button.setOnClickListener(new View.OnClickListener() {
@@ -65,10 +67,10 @@ public class Page3 extends AppCompatActivity {
     private void saveData() {
         //Save data.
         SharedPreferences.Editor editor = prefs.edit();
-        boolean isForty = forty.isChecked();
-        boolean isThirtyFour = thirtyfour.isChecked();
-        boolean isNineTeen = nineteen.isChecked();
-        boolean isFourTeen = fourteen.isChecked();
+        boolean isForty = q2_forty_rb.isChecked();
+        boolean isThirtyFour = q2_thirtyfour_rb.isChecked();
+        boolean isNineTeen = q2_nineteen_rb.isChecked();
+        boolean isFourTeen = q2_fourteen_rb.isChecked();
         editor.putBoolean("FORTY", isForty);
         editor.putBoolean("THIRTYFOUR", isThirtyFour);
         editor.putBoolean("NINETEEN", isNineTeen);

@@ -21,7 +21,7 @@
             android:layout_marginTop="28dp"
             android:fontFamily="sans-serif"
             android:text="@string/sixth_question"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="30sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean"
@@ -32,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="20dp"
-            android:background="#FFFFFF"
+            android:background="@color/White"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -46,7 +46,7 @@
             android:layout_margin="20dp"
             android:background="#000000"
             android:text="@string/submitAnswer"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             tools:text="Submit" />
 
 
@@ -58,7 +58,7 @@
             android:background="#000000"
             android:onClick="showResult"
             android:text="@string/summary_result"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             tools:text="Quiz result" />
 
         <TextView
@@ -68,7 +68,7 @@
             android:layout_margin="20dp"
             app:fontFamily="sans-serif"
             android:text="@string/score_summary"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="27sp" />
 
 
@@ -90,7 +90,7 @@
             android:layout_margin="20dp"
             android:background="#000000"
             android:text="@string/previous_page"
-            android:textColor="#FFFFFF" />
+            android:textColor="@color/White" />
 
     </LinearLayout>
 </ScrollView>

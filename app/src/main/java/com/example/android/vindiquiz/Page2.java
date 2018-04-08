@@ -10,7 +10,10 @@ import android.widget.CheckBox;
 
 public class Page2 extends AppCompatActivity {
 
-    private CheckBox rocheste, colheln, malina, berbhe;
+    private CheckBox q1_rocheste_cb;
+    private CheckBox q1_colheln_cb;
+    private CheckBox q1_malina_cb;
+    private CheckBox q1_berbhe_cb;
     private SharedPreferences prefs;
     String data, name;
 
@@ -23,15 +26,15 @@ public class Page2 extends AppCompatActivity {
         prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
         name = prefs.getString("MY_NAME", "");
 
-        rocheste = (CheckBox) findViewById(R.id.rocheste);
-        colheln = (CheckBox) findViewById(R.id.colheln);
-        malina = (CheckBox) findViewById(R.id.malina);
-        berbhe = (CheckBox) findViewById(R.id.berbhe);
+        q1_rocheste_cb = (CheckBox) findViewById(R.id.q1_rocheste_cb);
+        q1_colheln_cb = (CheckBox) findViewById(R.id.q1_colheln_cb);
+        q1_malina_cb = (CheckBox) findViewById(R.id.q1_malina_cb);
+        q1_berbhe_cb = (CheckBox) findViewById(R.id.q1_berbhe_cb);
 
-        rocheste.setChecked(prefs.getBoolean("ROCHESTE", false));
-        colheln.setChecked(prefs.getBoolean("COLHELN", false));
-        malina.setChecked(prefs.getBoolean("MALINA", false));
-        berbhe.setChecked(prefs.getBoolean("BERBHE", false));
+        q1_rocheste_cb.setChecked(prefs.getBoolean("ROCHESTE", false));
+        q1_colheln_cb.setChecked(prefs.getBoolean("COLHELN", false));
+        q1_malina_cb.setChecked(prefs.getBoolean("MALINA", false));
+        q1_berbhe_cb.setChecked(prefs.getBoolean("BERBHE", false));
 
         Button button = findViewById(R.id.nextPage);
         button.setOnClickListener(new View.OnClickListener() {
@@ -51,7 +54,9 @@ public class Page2 extends AppCompatActivity {
 
     }
 
-
+    /**
+     * Saves data and changes page
+     */
     public void openActivityPage3() {
         saveData();
         Intent intent = new Intent(this, Page3.class);
@@ -67,10 +72,10 @@ public class Page2 extends AppCompatActivity {
     private void saveData() {
         //Save data.
         SharedPreferences.Editor editor = prefs.edit();
-        boolean isRocheste = rocheste.isChecked();
-        boolean isColheln = colheln.isChecked();
-        boolean isMalina = malina.isChecked();
-        boolean isBerbhe = berbhe.isChecked();
+        boolean isRocheste = q1_rocheste_cb.isChecked();
+        boolean isColheln = q1_colheln_cb.isChecked();
+        boolean isMalina = q1_malina_cb.isChecked();
+        boolean isBerbhe = q1_berbhe_cb.isChecked();
         editor.putBoolean("ROCHESTE", isRocheste);
         editor.putBoolean("COLHELN", isColheln);
         editor.putBoolean("MALINA", isMalina);

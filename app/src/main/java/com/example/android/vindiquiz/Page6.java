@@ -13,7 +13,10 @@ import com.bumptech.glide.Glide;
 
 public class Page6 extends AppCompatActivity {
 
-    private CheckBox sylas, hagie, evie, hurk;
+    private CheckBox q5_sylas_cb;
+    private CheckBox q5_hagie_cb;
+    private CheckBox q5_evie_cb;
+    private CheckBox q5_hurk_cb;
     private SharedPreferences prefs;
 
     @Override
@@ -25,17 +28,16 @@ public class Page6 extends AppCompatActivity {
         Glide.with(this).load(R.drawable.sylas_gif).asGif().into(sylas_gif);
 
         prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
-        String name = prefs.getString("MY_NAME", "");
 
-        sylas = (CheckBox) findViewById(R.id.sylas);
-        hagie = (CheckBox) findViewById(R.id.hagie);
-        evie = (CheckBox) findViewById(R.id.evie);
-        hurk = (CheckBox) findViewById(R.id.hurk);
+        q5_sylas_cb = (CheckBox) findViewById(R.id.q5_sylas_cb);
+        q5_hagie_cb = (CheckBox) findViewById(R.id.q5_hagie_cb);
+        q5_evie_cb = (CheckBox) findViewById(R.id.q5_evie_cb);
+        q5_hurk_cb = (CheckBox) findViewById(R.id.q5_hurk_cb);
 
-        sylas.setChecked(prefs.getBoolean("SYLAS", false));
-        hagie.setChecked(prefs.getBoolean("HAGIE", false));
-        evie.setChecked(prefs.getBoolean("EVIE", false));
-        hurk.setChecked(prefs.getBoolean("HURK", false));
+        q5_sylas_cb.setChecked(prefs.getBoolean("SYLAS", false));
+        q5_hagie_cb.setChecked(prefs.getBoolean("HAGIE", false));
+        q5_evie_cb.setChecked(prefs.getBoolean("EVIE", false));
+        q5_hurk_cb.setChecked(prefs.getBoolean("HURK", false));
 
         Button button = findViewById(R.id.nextPage);
         button.setOnClickListener(new View.OnClickListener() {
@@ -70,10 +72,10 @@ public class Page6 extends AppCompatActivity {
     private void saveData() {
         //Save data.
         SharedPreferences.Editor editor = prefs.edit();
-        boolean isSylas = sylas.isChecked();
-        boolean isHagie = hagie.isChecked();
-        boolean isEvie = evie.isChecked();
-        boolean isHurk = hurk.isChecked();
+        boolean isSylas = q5_sylas_cb.isChecked();
+        boolean isHagie = q5_hagie_cb.isChecked();
+        boolean isEvie = q5_evie_cb.isChecked();
+        boolean isHurk = q5_hurk_cb.isChecked();
         editor.putBoolean("SYLAS", isSylas);
         editor.putBoolean("HAGIE", isHagie);
         editor.putBoolean("EVIE", isEvie);

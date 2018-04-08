@@ -2,6 +2,7 @@
     <string name="app_name">Vindiquiz</string>
     <string name="text_one">How much do you know</string>
     <string name="text_two">about:</string>
+    <string name="name">Name:</string>
     <string name="header_image">Header image</string>
     <string name="first_question">I. In which of the following maps can you enhance your gear?</string>
     <string name="text_three">Find out in the Quiz below!</string>

@@ -23,7 +23,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="@string/fifth_question"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean"
@@ -38,49 +38,49 @@
             app:srcCompat="@drawable/sylas_gif" />
 
         <CheckBox
-            android:id="@+id/sylas"
+            android:id="@+id/q5_sylas_cb"
             android:layout_width="84dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:text="@string/sylas_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean" />
 
         <CheckBox
-            android:id="@+id/hagie"
+            android:id="@+id/q5_hagie_cb"
             android:layout_width="90dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:text="@string/hagie_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean" />
 
         <CheckBox
-            android:id="@+id/evie"
+            android:id="@+id/q5_evie_cb"
             android:layout_width="84dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:text="@string/evie_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean" />
 
         <CheckBox
-            android:id="@+id/hurk"
+            android:id="@+id/q5_hurk_cb"
             android:layout_width="84dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:text="@string/hurk_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean" />
@@ -101,7 +101,7 @@
                 android:layout_margin="5dp"
                 android:background="#000000"
                 android:text="@string/previous_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
             <Button
                 android:id="@+id/nextPage"
@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content"
                 android:background="#000000"
                 android:text="@string/next_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
         </LinearLayout>
     </LinearLayout>

@@ -25,7 +25,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="@string/first_question"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             android:gravity="center"
@@ -40,7 +40,7 @@
             android:src="@drawable/rocheste" />
 
         <CheckBox
-            android:id="@+id/rocheste"
+            android:id="@+id/q1_rocheste_cb"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center"
@@ -49,7 +49,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:text="@string/rocheste_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="20sp"
             tools:text="Rocheste (Season I map)" />
 
@@ -60,7 +60,7 @@
             android:src="@mipmap/colheln" />
 
         <CheckBox
-            android:id="@+id/colheln"
+            android:id="@+id/q1_colheln_cb"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center"
@@ -69,7 +69,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:text="@string/colheln_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="20sp"
             tools:text="Colheln (Season I map)" />
 
@@ -80,7 +80,7 @@
             app:srcCompat="@mipmap/malina" />
 
         <CheckBox
-            android:id="@+id/malina"
+            android:id="@+id/q1_malina_cb"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center"
@@ -89,7 +89,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:text="@string/malina_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="20sp"
             tools:text="Malina (Season II map)" />
 
@@ -100,7 +100,7 @@
             app:srcCompat="@mipmap/berbhe" />
 
         <CheckBox
-            android:id="@+id/berbhe"
+            android:id="@+id/q1_berbhe_cb"
             android:layout_width="wrap_content"
             android:layout_height="30dp"
             android:layout_gravity="center"
@@ -110,7 +110,7 @@
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:text="@string/berbhe_checkbox"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="20sp"
             tools:text="Berbhe (Season III map)" />
 
@@ -130,7 +130,7 @@
                 android:layout_margin="5dp"
                 android:background="#000000"
                 android:text="@string/previous_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
             <Button
                 android:id="@+id/nextPage"
@@ -139,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:background="#000000"
                 android:text="@string/next_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
         </LinearLayout>
     </LinearLayout>

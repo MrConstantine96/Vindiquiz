@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 public class Page7 extends AppCompatActivity {
     int score = 0;
-    int resetScore = 0;
-    String name, answer;
+    String name;
+    String answer;
     private EditText editText;
     private SharedPreferences prefs;
 

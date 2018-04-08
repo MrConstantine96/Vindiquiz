@@ -23,7 +23,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="@string/fourth_question"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean"
@@ -42,39 +42,39 @@
 
 
             <RadioButton
-                android:id="@+id/oneOrTwo"
+                android:id="@+id/q4_oneOrTwo_rb"
                 android:layout_width="219dp"
                 android:layout_height="30dp"
                 android:text="@string/oneortwo_people"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="One or two people." />
 
             <RadioButton
-                android:id="@+id/twoOrThree"
+                android:id="@+id/q4_twoOrThree_rb"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="@string/twoorthree_people"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="Two or three people." />
 
 
             <RadioButton
-                android:id="@+id/threeOrFour"
+                android:id="@+id/q4_threeOrFour_rb"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:text="@string/threeorfour_people"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="Three or four people.." />
 
             <RadioButton
-                android:id="@+id/fourOrFive"
+                android:id="@+id/q4_fourOrFive_rb"
                 android:layout_width="220dp"
                 android:layout_height="30dp"
                 android:text="@string/fourorfive_people"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="Four or five people." />
         </RadioGroup>
@@ -102,7 +102,7 @@
                 android:layout_margin="5dp"
                 android:background="#000000"
                 android:text="@string/previous_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
             <Button
                 android:id="@+id/nextPage"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:background="#000000"
                 android:text="@string/next_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
         </LinearLayout>
     </LinearLayout>

@@ -10,7 +10,10 @@ import android.widget.RadioButton;
 
 public class Page5 extends AppCompatActivity {
 
-    private RadioButton oneortwo, twoorthree, threeorfour, fourorfive;
+    private RadioButton q4_oneOrTwo_rb;
+    private RadioButton q4_twoOrThree_rb;
+    private RadioButton q4_threeOrFour_rb;
+    private RadioButton q4_fourOrFive_rb;
     private SharedPreferences prefs;
 
     @Override
@@ -19,17 +22,16 @@ public class Page5 extends AppCompatActivity {
         setContentView(R.layout.pagenumber_5);
 
         prefs = getSharedPreferences("MY_DATA", MODE_PRIVATE);
-        String name = prefs.getString("MY_NAME", "");
 
-        oneortwo = (RadioButton) findViewById(R.id.oneOrTwo);
-        twoorthree = (RadioButton) findViewById(R.id.twoOrThree);
-        threeorfour = (RadioButton) findViewById(R.id.threeOrFour);
-        fourorfive = (RadioButton) findViewById(R.id.fourOrFive);
+        q4_oneOrTwo_rb = (RadioButton) findViewById(R.id.q4_oneOrTwo_rb);
+        q4_twoOrThree_rb = (RadioButton) findViewById(R.id.q4_twoOrThree_rb);
+        q4_threeOrFour_rb = (RadioButton) findViewById(R.id.q4_threeOrFour_rb);
+        q4_fourOrFive_rb = (RadioButton) findViewById(R.id.q4_fourOrFive_rb);
 
-        oneortwo.setChecked(prefs.getBoolean("ONEORTWO", false));
-        twoorthree.setChecked(prefs.getBoolean("TWOORTHREE", false));
-        threeorfour.setChecked(prefs.getBoolean("THREEORFOUR", false));
-        fourorfive.setChecked(prefs.getBoolean("FOURORFVE", false));
+        q4_oneOrTwo_rb.setChecked(prefs.getBoolean("ONEORTWO", false));
+        q4_twoOrThree_rb.setChecked(prefs.getBoolean("TWOORTHREE", false));
+        q4_threeOrFour_rb.setChecked(prefs.getBoolean("THREEORFOUR", false));
+        q4_fourOrFive_rb.setChecked(prefs.getBoolean("FOURORFVE", false));
 
         Button button = findViewById(R.id.nextPage);
         button.setOnClickListener(new View.OnClickListener() {
@@ -64,10 +66,10 @@ public class Page5 extends AppCompatActivity {
     private void saveData() {
         //Save data.
         SharedPreferences.Editor editor = prefs.edit();
-        boolean isOneOrTwo = oneortwo.isChecked();
-        boolean isTwoOrThree = twoorthree.isChecked();
-        boolean isThreeOrFour = threeorfour.isChecked();
-        boolean isFourOrFive = fourorfive.isChecked();
+        boolean isOneOrTwo = q4_oneOrTwo_rb.isChecked();
+        boolean isTwoOrThree = q4_twoOrThree_rb.isChecked();
+        boolean isThreeOrFour = q4_threeOrFour_rb.isChecked();
+        boolean isFourOrFive = q4_fourOrFive_rb.isChecked();
         editor.putBoolean("ONEORTWO", isOneOrTwo);
         editor.putBoolean("TWOORTHREE", isTwoOrThree);
         editor.putBoolean("THREEORFOUR", isThreeOrFour);

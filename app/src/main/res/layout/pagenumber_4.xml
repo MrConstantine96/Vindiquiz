@@ -23,7 +23,7 @@
             android:paddingLeft="20dp"
             android:paddingRight="20dp"
             android:text="@string/third_question"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/White"
             android:textSize="19sp"
             android:textStyle="bold"
             tools:targetApi="jelly_bean"
@@ -42,39 +42,39 @@
 
 
             <RadioButton
-                android:id="@+id/five"
+                android:id="@+id/q3_five_rb"
                 android:layout_width="180dp"
                 android:layout_height="30dp"
                 android:text="@string/five_radiobutton"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="5" />
 
             <RadioButton
-                android:id="@+id/ten"
+                android:id="@+id/q3_ten_rb"
                 android:layout_width="110dp"
                 android:layout_height="30dp"
                 android:text="@string/ten_radiobutton"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="10" />
 
 
             <RadioButton
-                android:id="@+id/twenty"
+                android:id="@+id/q3_twenty_rb"
                 android:layout_width="110dp"
                 android:layout_height="30dp"
                 android:text="@string/thirty_radiobutton"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="30" />
 
             <RadioButton
-                android:id="@+id/fivty"
+                android:id="@+id/q3_fivty_rb"
                 android:layout_width="110dp"
                 android:layout_height="30dp"
                 android:text="@string/fivty_radiobutton"
-                android:textColor="#FFFFFF"
+                android:textColor="@color/White"
                 android:textSize="18sp"
                 tools:text="50" />
         </RadioGroup>
@@ -102,7 +102,7 @@
                 android:layout_margin="5dp"
                 android:background="#000000"
                 android:text="@string/previous_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
             <Button
                 android:id="@+id/nextPage"
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:background="#000000"
                 android:text="@string/next_page"
-                android:textColor="#FFFFFF" />
+                android:textColor="@color/White" />
 
         </LinearLayout>
     </LinearLayout>
